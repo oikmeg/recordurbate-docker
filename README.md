@@ -14,5 +14,14 @@ docker run --name=recordurbate --user=99:100 --env=TZ=America/Chicago \
     ghcr.io/oikmeg/recordurbate-docker:main
 ```
 
-You can run any of Recordurbate's commands in the docker's shell, using the `rb` alias. For example:
-`rb add somemodel`. Full list of commands are found [here](https://github.com/oliverjrose99/Recordurbate#usage)
+You can run any of Recordurbate's commands in the docker's shell:
+
+```
+docker exec -it recordurbate /bin/bash
+```
+
+Using the `rb` alias. For example:
+
+`rb add somemodel`
+
+Full list of commands are found [here](https://github.com/oliverjrose99/Recordurbate#usage)
