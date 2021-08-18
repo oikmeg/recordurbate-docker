@@ -25,7 +25,9 @@ RUN git clone https://github.com/oliverjrose99/Recordurbate.git && \
   rm -rfv Recordurbate && \
   chmod +x Recordurbate.py && \
   rm -rf configs && \
-  echo 'alias recordurbate="python /app/recordurbate/Recordurbate.py"' >> ~/.bashrc
+  printf '#!/bin/bash \n python /app/recordurbate/Recordurbate.py "$@"' > /usr/bin/rb && \
+    chmod +x /usr/bin/rb
+
 
 RUN apk del \
   build-base \
