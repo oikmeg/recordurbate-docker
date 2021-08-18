@@ -1,4 +1,4 @@
-FROM python:alpine3.12
+FROM python:alpine3.14
 
 RUN apk add --no-cache \
   build-base \
